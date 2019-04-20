@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p "$SNAP_DATA/hosts"
+
+echo 'Name = $HOST' > "$SNAP_DATA/tinc.conf"
+
+"$SNAP/usr/sbin/tincd" -c "$SNAP_DATA" -K
+
